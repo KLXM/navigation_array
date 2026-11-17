@@ -1,6 +1,6 @@
 <?php
 
-use FriendsOfRedaxo\NavigationArray\Component\NavigationBreadcrumb;
+use Klxm\NavigationArray\Component\NavigationBreadcrumb;
 use Redaxo\Core\View\HtmlAttributes;
 
 use function Redaxo\Core\View\escape;

@@ -5,17 +5,17 @@ Daten – die Ausgabe bleibt ganz bei dir. Dazu Brotkrumen, strukturierte Daten 
 Komponenten für Menü und Brotkrumen.
 
 > [!NOTE]
-> Dies ist der Branch **6.x** für REDAXO 6, das noch in Entwicklung ist (Branch 6.x von redaxo/core). Er ist für PHP 8.5
-> und die API von REDAXO 6 neu gebaut – ohne Rücksicht auf die Version für REDAXO 5. Die gibt es unverändert im Branch
-> [`master`](https://github.com/FriendsOfREDAXO/navigation_array/tree/master) und im Installer.
+> Diese Fassung für REDAXO 6 (noch in Entwicklung) ist ein AddOn von KLXM, neu gebaut für PHP 8.5 und die API von
+> REDAXO 6 – ohne Rücksicht auf die Version für REDAXO 5. Die pflegt Friends Of REDAXO weiter unter
+> [FriendsOfREDAXO/navigation_array](https://github.com/FriendsOfREDAXO/navigation_array) und im Installer.
 
 ## Installation
 
 REDAXO 6 installiert AddOns mit Composer. Solange das Paket nicht auf Packagist steht, holt Composer es direkt von GitHub:
 
 ```bash
-composer config repositories.navigation_array '{"type": "vcs", "url": "https://github.com/FriendsOfREDAXO/navigation_array", "no-api": true}'
-composer require friendsofredaxo/navigation_array:6.x-dev
+composer config repositories.navigation_array '{"type": "vcs", "url": "https://github.com/KLXM/navigation_array", "no-api": true}'
+composer require klxm/navigation_array:1.x-dev
 php bin/console migrate
 ```
 
@@ -27,8 +27,8 @@ Voraussetzungen: PHP 8.5, REDAXO 6. Keine Einstellungen, keine eigenen Tabellen.
 Kinder genauso rendert – verschachteltes Markup ohne Buchhaltung über Ebenen:
 
 ```php
-use FriendsOfRedaxo\NavigationArray\Navigation;
-use FriendsOfRedaxo\NavigationArray\NavigationItem;
+use Klxm\NavigationArray\Navigation;
+use Klxm\NavigationArray\NavigationItem;
 
 use function Redaxo\Core\View\escape;
 
@@ -68,7 +68,7 @@ online, an ihrer Stelle und mit ihren Unterseiten; nur die Navigation lässt sie
 sie weiter, die Seite bleibt erreichbar (z. B. eine Aktionsseite oder ein Bereich nur per Link).
 
 ```php
-use FriendsOfRedaxo\NavigationArray\NavigationMeta;
+use Klxm\NavigationArray\NavigationMeta;
 use Redaxo\Core\Content\CategoryHandler;
 
 NavigationMeta::of($category)->navHidden;                                // lesen
@@ -162,7 +162,7 @@ new Navigation(depth: 10)->walk(static function (NavigationItem $item, Closure $
 ### Brotkrumen und strukturierte Daten
 
 ```php
-use FriendsOfRedaxo\NavigationArray\BreadcrumbItem;
+use Klxm\NavigationArray\BreadcrumbItem;
 
 $nav = new Navigation();
 
@@ -182,8 +182,8 @@ Für die häufigsten Fälle bringt das AddOn zwei Komponenten nach dem Muster de
 daneben):
 
 ```php
-use FriendsOfRedaxo\NavigationArray\Component\NavigationBreadcrumb;
-use FriendsOfRedaxo\NavigationArray\Component\NavigationMenu;
+use Klxm\NavigationArray\Component\NavigationBreadcrumb;
+use Klxm\NavigationArray\Component\NavigationMenu;
 
 echo new NavigationMenu(new Navigation(depth: 1), label: 'Hauptmenü', activeClass: 'is-active')->render();
 
@@ -211,7 +211,7 @@ Extension Points sind wie im Core von REDAXO 6 Klassen – registriert wird mit 
 Jeder Eintrag einer Kategorie, nachdem er gebaut ist. Andere AddOns ergänzen so eigene Daten:
 
 ```php
-use FriendsOfRedaxo\NavigationArray\ExtensionPoint\NavigationItemGenerated;
+use Klxm\NavigationArray\ExtensionPoint\NavigationItemGenerated;
 use Redaxo\Core\ExtensionPoint\Extension;
 
 Extension::register(NavigationItemGenerated::class, static fn (NavigationItemGenerated $ep): NavigationItem
@@ -225,7 +225,7 @@ kam er aus yrewrite; in REDAXO 6 liefert ihn das AddOn, das Domains verwaltet (f
 Ohne Extension ist es die oberste Ebene.
 
 ```php
-use FriendsOfRedaxo\NavigationArray\ExtensionPoint\NavigationStart;
+use Klxm\NavigationArray\ExtensionPoint\NavigationStart;
 
 Extension::register(NavigationStart::class, static fn (NavigationStart $ep): int|array => MyDomains::mountId($ep->articleId) ?? $ep->subject);
 ```
@@ -253,4 +253,4 @@ Die Version für REDAXO 6 ist neu gebaut. Die Ideen sind dieselben, die API ist 
 
 ## Lizenz
 
-MIT – siehe [LICENSE](LICENSE). Ein Projekt von [Friends Of REDAXO](https://friendsofredaxo.github.io).
+MIT – siehe [LICENSE](LICENSE). Ein Projekt von [KLXM Crossmedia](https://klxm.de). Die Fassung für REDAXO 5 pflegt [Friends Of REDAXO](https://github.com/FriendsOfREDAXO/navigation_array).

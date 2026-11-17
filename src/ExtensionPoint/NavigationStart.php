@@ -1,6 +1,6 @@
 <?php
 
-namespace FriendsOfRedaxo\NavigationArray\ExtensionPoint;
+namespace Klxm\NavigationArray\ExtensionPoint;
 
 use Redaxo\Core\ExtensionPoint\ExtensionPoint;
 

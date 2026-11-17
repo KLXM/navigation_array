@@ -1,6 +1,7 @@
 {
-    "name": "friendsofredaxo/navigation_array",
+    "name": "klxm/navigation_array",
     "description": "Navigation als Array für REDAXO 6: Kategorien und Artikel mit Hierarchie, Filter, Brotkrumen und JSON-LD – die Ausgabe bleibt bei dir",
+    "homepage": "https://github.com/KLXM/navigation_array",
     "type": "redaxo-addon",
     "license": "MIT",
     "keywords": [
@@ -11,16 +12,25 @@
         "menu",
         "breadcrumb"
     ],
-    "homepage": "https://github.com/FriendsOfREDAXO/navigation_array",
     "authors": [
         {
+            "name": "Thomas Skerbis",
+            "homepage": "https://github.com/skerbis",
+            "role": "Lead"
+        },
+        {
+            "name": "KLXM Crossmedia GmbH",
+            "homepage": "https://klxm.de"
+        },
+        {
             "name": "Friends Of REDAXO",
-            "homepage": "https://friendsofredaxo.github.io"
+            "homepage": "https://friendsofredaxo.github.io",
+            "role": "REDAXO 5 version"
         }
     ],
     "support": {
-        "issues": "https://github.com/FriendsOfREDAXO/navigation_array/issues",
-        "source": "https://github.com/FriendsOfREDAXO/navigation_array"
+        "issues": "https://github.com/KLXM/navigation_array/issues",
+        "source": "https://github.com/KLXM/navigation_array"
     },
     "require": {
         "php": "^8.5",
@@ -28,12 +38,15 @@
     },
     "autoload": {
         "psr-4": {
-            "FriendsOfRedaxo\\NavigationArray\\": "src/"
+            "Klxm\\NavigationArray\\": "src/"
         }
     },
     "extra": {
         "redaxo": {
-            "addon-class": "FriendsOfRedaxo\\NavigationArray\\NavigationArrayAddon"
+            "addon-class": "Klxm\\NavigationArray\\NavigationArrayAddon"
+        },
+        "branch-alias": {
+            "dev-main": "1.x-dev"
         }
     }
 }

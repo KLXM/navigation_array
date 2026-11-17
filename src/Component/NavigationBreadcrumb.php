@@ -1,9 +1,9 @@
 <?php
 
-namespace FriendsOfRedaxo\NavigationArray\Component;
+namespace Klxm\NavigationArray\Component;
 
-use FriendsOfRedaxo\NavigationArray\BreadcrumbItem;
-use FriendsOfRedaxo\NavigationArray\Navigation;
+use Klxm\NavigationArray\BreadcrumbItem;
+use Klxm\NavigationArray\Navigation;
 use Redaxo\Core\Content\Category;
 use Redaxo\Core\View\Renderable;
 use Redaxo\Core\View\RendersView;

@@ -1,7 +1,7 @@
 <?php
 
-use FriendsOfRedaxo\NavigationArray\Component\NavigationMenu;
-use FriendsOfRedaxo\NavigationArray\NavigationItem;
+use Klxm\NavigationArray\Component\NavigationMenu;
+use Klxm\NavigationArray\NavigationItem;
 use Redaxo\Core\View\HtmlAttributes;
 
 use function Redaxo\Core\View\escape;

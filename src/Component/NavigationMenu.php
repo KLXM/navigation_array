@@ -1,8 +1,8 @@
 <?php
 
-namespace FriendsOfRedaxo\NavigationArray\Component;
+namespace Klxm\NavigationArray\Component;
 
-use FriendsOfRedaxo\NavigationArray\Navigation;
+use Klxm\NavigationArray\Navigation;
 use Redaxo\Core\View\Renderable;
 use Redaxo\Core\View\RendersView;
 

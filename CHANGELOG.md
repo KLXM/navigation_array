@@ -5,7 +5,7 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [6.0.0-dev] – Branch 6.x (REDAXO 6, in Entwicklung)
+## [1.0.0-dev] – REDAXO 6 (in Entwicklung), jetzt klxm/navigation_array bei KLXM
 
 Neu gebaut für REDAXO 6 und PHP 8.5 – ohne Rücksicht auf die API von 5.x (siehe „Umstieg von REDAXO 5“ in der README).
 
@@ -17,7 +17,7 @@ Neu gebaut für REDAXO 6 und PHP 8.5 – ohne Rücksicht auf die API von 5.x (si
 
 ### Changed
 
-- Composer-Paket vom Typ `redaxo-addon` (`friendsofredaxo/navigation_array`), Klassen in `src/`.
+- Composer-Paket vom Typ `redaxo-addon` (`klxm/navigation_array`), Klassen in `src/`.
 - `Navigation` (readonly, benannte Argumente) statt `BuildArray` mit Settern; Einträge sind `NavigationItem`-Objekte
   statt Arrays (`JsonSerializable`), Brotkrumen `BreadcrumbItem`.
 - `walk()` rendert verschachtelt: Callback mit Eintrag und Closure für die Kinder, Rückgabe als String.
@@ -31,7 +31,7 @@ Neu gebaut für REDAXO 6 und PHP 8.5 – ohne Rücksicht auf die API von 5.x (si
 
 ### Removed
 
-- `package.yml`, `lib/`, Fragment, Veröffentlichung im REDAXO-5-Installer (bleibt im Branch `master`).
+- `package.yml`, `lib/`, Fragment, Veröffentlichung im REDAXO-5-Installer (bleibt bei FriendsOfREDAXO/navigation_array).
 
 ## [5.4.2] – 2026-05-06
 
@@ -77,7 +77,7 @@ Neu gebaut für REDAXO 6 und PHP 8.5 – ohne Rücksicht auf die API von 5.x (si
 
 ### Fixed
 
-- Depth-Berechnung korrigiert (PR [#43](https://github.com/FriendsOfREDAXO/navigation_array/pull/43)).
+- Depth-Berechnung korrigiert (PR [#43](https://github.com/KLXM/navigation_array/pull/43)).
 - README aktualisiert.
 
 ### Contributors
@@ -88,7 +88,7 @@ Neu gebaut für REDAXO 6 und PHP 8.5 – ohne Rücksicht auf die API von 5.x (si
 
 ### Fixed
 
-- Whoops-Fehler bei ausgelagertem Funktionsaufruf behoben (PR [#42](https://github.com/FriendsOfREDAXO/navigation_array/pull/42)).
+- Whoops-Fehler bei ausgelagertem Funktionsaufruf behoben (PR [#42](https://github.com/KLXM/navigation_array/pull/42)).
 
 ### Contributors
 
@@ -113,7 +113,7 @@ Neu gebaut für REDAXO 6 und PHP 8.5 – ohne Rücksicht auf die API von 5.x (si
 
 ### Added
 
-- Neue interne Methode `isPermitted()` (PR [#40](https://github.com/FriendsOfREDAXO/navigation_array/pull/40)).
+- Neue interne Methode `isPermitted()` (PR [#40](https://github.com/KLXM/navigation_array/pull/40)).
 
 ### Contributors
 
@@ -135,7 +135,7 @@ Neu gebaut für REDAXO 6 und PHP 8.5 – ohne Rücksicht auf die API von 5.x (si
 
 - Neue `toJson()`-Methode.
 - Neue `setExcludedCategories()`-Methode.
-- Fragment-Integration (PR [#34](https://github.com/FriendsOfREDAXO/navigation_array/pull/34)).
+- Fragment-Integration (PR [#34](https://github.com/KLXM/navigation_array/pull/34)).
 
 ### Changed
 
@@ -153,7 +153,7 @@ Neu gebaut für REDAXO 6 und PHP 8.5 – ohne Rücksicht auf die API von 5.x (si
 - Deprecated-Class `\FriendsOfRedaxo\navigationArray` entfernt.
 - Deprecated-Funktion `navArray()` entfernt.
 
-> **Migration:** Vorhandener Code muss auf `FriendsOfRedaxo\NavigationArray\BuildArray` umgestellt werden (siehe README).
+> **Migration:** Vorhandener Code muss auf `Klxm\NavigationArray\BuildArray` umgestellt werden (siehe README).
 
 ## [3.1.1] – 2024-04-05
 
@@ -179,7 +179,7 @@ Neu gebaut für REDAXO 6 und PHP 8.5 – ohne Rücksicht auf die API von 5.x (si
 
 ### Added
 
-- Neuer Namespace `FriendsOfRedaxo\NavigationArray\BuildArray`.
+- Neuer Namespace `Klxm\NavigationArray\BuildArray`.
 - `setCategoryFilterCallback()` für benutzerdefinierte Kategorie-Filter.
 - `setCustomDataCallback()` für benutzerdefinierte Daten pro Item.
 - Mehrere Startkategorien als Array übergebbar.

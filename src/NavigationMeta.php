@@ -1,6 +1,6 @@
 <?php
 
-namespace FriendsOfRedaxo\NavigationArray;
+namespace Klxm\NavigationArray;
 
 use Redaxo\Core\Form\Field\Checkbox;
 use Redaxo\Core\MetaInfo\AsMetaSchema;

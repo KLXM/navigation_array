@@ -1,6 +1,6 @@
 <?php
 
-namespace FriendsOfRedaxo\NavigationArray;
+namespace Klxm\NavigationArray;
 
 use JsonSerializable;
 use Override;

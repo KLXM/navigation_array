@@ -1,10 +1,10 @@
 <?php
 
-namespace FriendsOfRedaxo\NavigationArray;
+namespace Klxm\NavigationArray;
 
 use Closure;
-use FriendsOfRedaxo\NavigationArray\ExtensionPoint\NavigationItemGenerated;
-use FriendsOfRedaxo\NavigationArray\ExtensionPoint\NavigationStart;
+use Klxm\NavigationArray\ExtensionPoint\NavigationItemGenerated;
+use Klxm\NavigationArray\ExtensionPoint\NavigationStart;
 use Redaxo\Core\Content\Article;
 use Redaxo\Core\Content\Category;
 use Redaxo\Core\ExtensionPoint\Extension;
