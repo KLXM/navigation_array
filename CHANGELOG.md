@@ -5,7 +5,7 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [1.0.0-dev] – REDAXO 6 (in Entwicklung), jetzt klxm/navigation_array bei KLXM
+## [1.0.0-beta.1] – 2026-11-18 – REDAXO 6, jetzt klxm/navigation_array bei KLXM
 
 Neu gebaut für REDAXO 6 und PHP 8.5 – ohne Rücksicht auf die API von 5.x (siehe „Umstieg von REDAXO 5“ in der README).
 

@@ -11,11 +11,10 @@ Komponenten für Menü und Brotkrumen.
 
 ## Installation
 
-REDAXO 6 installiert AddOns mit Composer. Solange das Paket nicht auf Packagist steht, holt Composer es direkt von GitHub:
+REDAXO 6 installiert AddOns mit Composer:
 
 ```bash
-composer config repositories.navigation_array '{"type": "vcs", "url": "https://github.com/KLXM/navigation_array", "no-api": true}'
-composer require klxm/navigation_array:1.x-dev
+composer require klxm/navigation_array:^1.0@beta
 php bin/console migrate
 ```
 
