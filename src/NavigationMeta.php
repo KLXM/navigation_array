@@ -6,6 +6,7 @@ use Redaxo\Core\Form\Field\Checkbox;
 use Redaxo\Core\MetaInfo\AsMetaSchema;
 use Redaxo\Core\MetaInfo\MetaEntity;
 use Redaxo\Core\MetaInfo\MetaSchema;
+use Redaxo\Core\Translation\Translatable;
 
 /**
  * Meta field of categories: „Nicht in der Navigation zeigen“ (column `meta_nav_hidden`, the same for all languages).
@@ -19,6 +20,6 @@ use Redaxo\Core\MetaInfo\MetaSchema;
 #[AsMetaSchema(MetaEntity::Category)]
 final class NavigationMeta extends MetaSchema
 {
-    #[Checkbox('Nicht in der Navigation zeigen', note: 'Die Seite bleibt online und an ihrer Stelle, nur das Menü lässt sie samt Unterseiten weg.')]
+    #[Checkbox(new Translatable('navigation_array_nav_hidden'), note: new Translatable('navigation_array_nav_hidden_note'))]
     public bool $navHidden = false;
 }
